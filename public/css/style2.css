@@ -1,0 +1,300 @@
+.nav-header .profile-element {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.dropdown .clear {
+    padding-left: 5px;
+    font-size   : 15px;
+}
+
+.border-bottom .navbar-static-top {
+    border-bottom: 1px solid #e7eaec;
+    margin-bottom: 0;
+}
+
+.gray-bg .dashboard-header {
+    height    : 620px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.gray-bg .footer {
+    padding: 20px 0;
+}
+
+[data-tooltip] {
+    position: relative;
+    cursor  : pointer;
+}
+
+[data-tooltip]:hover::before {
+    content         : attr(data-tooltip);
+    position        : absolute;
+    bottom          : 100%;
+    left            : 50%;
+    transform       : translateX(-50%);
+    margin-bottom   : 10px;
+    padding         : 4px 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color           : white;
+    font-size       : 12px;
+    border-radius   : 4px;
+    white-space     : nowrap;
+    z-index         : 100;
+}
+
+[data-tooltip]:hover::after {
+    content      : '';
+    position     : absolute;
+    bottom       : 100%;
+    left         : 50%;
+    transform    : translateX(-50%);
+    margin-bottom: 2px;
+    border-width : 5px;
+    border-style : solid;
+    border-color : rgba(0, 0, 0, 0.8) transparent transparent transparent;
+    z-index      : 101;
+}
+
+.my-ibox-title {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+/* Không cần CSS cho số thứ tự tự động nữa vì đã dùng JavaScript */
+.dataTables-phongkho tbody tr td:first-child {
+    text-align : center;
+    font-weight: 500;
+}
+
+/* Thêm CSS cho số thứ tự */
+.dataTables-phongkho tbody tr:hover td:first-child {
+    background-color: #f0f8ff;
+    font-weight     : bold;
+}
+
+/* CSS cho các nút phân trang với chữ màu xanh và nền xám
+.pagination>li>a,
+.pagination>li>span {
+    color           : #086df0;
+    background-color: #9c9595;
+    border          : none;
+    transition      : all 0.3s ease;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    color           : #1a73e8;
+    background-color: #e0e0e0;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background-color: #e0e0e0;
+    color           : #1a73e8;
+    font-weight     : bold;
+}
+
+.pagination>.disabled>span,
+.pagination>.disabled>span:hover,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus {
+    color           : #aaa;
+    background-color: #f5f5f5;
+    cursor          : not-allowed;
+} */
+#editModalLabel,
+#addModalLabel {
+    font-size  : 20px;
+    font-weight: bold;
+    color      : rgb(114, 192, 248);
+}
+
+.row .control-label {
+    text-align: right;
+    font-size : 14px;
+    margin-top: 7px;
+}
+
+#deleteModalLabel {
+    font-size  : 20px;
+    font-weight: bold;
+    color      : rgb(240, 36, 36);
+}
+
+.modal-body p strong {
+    font-size: 16px;
+}
+
+/* CSS cho các sơ đồ phòng máy */
+.lab-container {
+    display              : grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap                  : 10px;
+    max-width            : 100%;
+    margin               : 5px;
+    padding              : 10px;
+    background           : linear-gradient(135deg, #e0e3ea, #dcdee4);
+    border-radius        : 20px;
+    box-shadow           : 0 8px 10px rgba(0, 0, 0, 0.4);
+}
+
+.machine-tile {
+    background     : #1e40af;
+    color          : white;
+    font-weight    : bold;
+    font-size      : 16px;
+    text-align     : center;
+    border-radius  : 16px;
+    height         : 40px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    cursor         : pointer;
+    transition     : all 0.3s ease;
+    box-shadow     : inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.machine-tile:hover {
+    background: #2563eb;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+    transform : scale(1.05);
+}
+
+.machine-tile.danger:hover {
+    background: #dc2626;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.7);
+}
+
+.section-title {
+    text-align   : center;
+    color        : #3976f0;
+    font-size    : 24px;
+    font-weight  : 600;
+    margin-bottom: 20px;
+}
+
+.lab-container .section-title {
+    grid-column: span 6;
+}
+
+.lab-container .section-title span {
+    display   : inline-block;
+    width     : 100%;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1535px) {
+
+    /* Các style áp dụng khi màn hình nhỏ hơn 1535px */
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+#phongSearch::placeholder {
+    color     : #999;
+    font-style: italic;
+}
+
+#phongSearch {
+    position: relative;
+    z-index : 1;
+}
+
+.form-group.autocomplete {
+    position: relative;
+}
+
+.form-group.autocomplete {
+    position: relative;
+}
+
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    border    : 1px solid #d4d4d4;
+    background: white;
+    z-index   : 2147483647;
+    position  : absolute;
+    /* jQuery UI dùng cái này */
+}
+
+.ui-autocomplete .ui-menu-item:hover,
+.ui-autocomplete .ui-state-active {
+    color           : white;
+    font-weight     : bold;
+    font-size       : 17px;
+    background-color: #4e90bd;
+}
+
+
+@media (max-width: 767px) {
+    .sodo {
+        max-width : 100%;
+        overflow-x: auto;
+    }
+
+    #sodophongmay {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Other styles */
+.status_phongmay {
+    outline        : none;
+    border         : 0;
+    background     : #007bff;
+    color          : white;
+    border-radius  : 8px;
+    height         : 40px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    font-weight    : bold;
+    cursor         : pointer;
+    transition     : 0.3s;
+}
+
+/*CSS cho datatable*/
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
+    content     : "" !important;
+    font-family : "Font Awesome 6 Free";
+    font-weight : 900;
+    padding-left: 8px;
+}
+
+/* Icon mặc định (chưa sắp xếp) */
+table.dataTable thead .sorting::after {
+    content: "\f0dc";
+    /* fa-sort */
+}
+
+/* Icon sắp xếp tăng */
+table.dataTable thead .sorting_asc::after {
+    content: "\f0de";
+    /* fa-sort-up */
+}
+
+/* Icon sắp xếp giảm */
+table.dataTable thead .sorting_desc::after {
+    content: "\f0dd";
+    /* fa-sort-down */
+}
